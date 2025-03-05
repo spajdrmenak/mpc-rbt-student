@@ -39,6 +39,7 @@ void from_json(const nlohmann::json & j, Config::Sender & c)
   j.at("localPort").get_to(c.localPort);
   j.at("remotePort").get_to(c.remotePort);
   j.at("remoteAddress").get_to(c.remoteAddress);
+  j.at("sendingPeriodMillis").get_to(c.sendingPeriodMillis);
 }
 
 void from_json(const nlohmann::json & j, Config::Receiver & c)

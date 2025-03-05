@@ -32,7 +32,5 @@ void Sender::Node::onDataTimerTick()
   RCLCPP_INFO(logger, "Sending data to host: '%s:%d'", frame.address.c_str(), frame.port);
 
   RCLCPP_INFO(logger, "\n\tstamp: %ld", data.timestamp);
-  RCLCPP_INFO(logger, "\n\thodnota x: %f", data.x);
-  RCLCPP_INFO(logger, "\n\thodnota y: %f", data.y);
-  RCLCPP_INFO(logger, "\n\thodnota z: %f", data.z);
+  RCLCPP_INFO(logger, "\n\thodnota x: %f, %f, %f", data.x, data.y, data.z);
 }
