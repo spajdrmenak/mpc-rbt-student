@@ -18,7 +18,11 @@ public:
     config(senderConfig),
     timer_period(config.sendingPeriodMillis)
   {
-    UNIMPLEMENTED(__PRETTY_FUNCTION__);
+    create();
+    configure();
+    bind();
+
+    callback = [this] { onDataTimerTick(); };
   }
 
   void run();
@@ -27,6 +31,10 @@ private:
   void onDataTimerTick();
 
   Utils::Message data{};
+
+  int xx = 1;
+  int yy= 1;
+  int zz = 1;
 
   Utils::Config::Sender config;
   std::chrono::milliseconds timer_period;
