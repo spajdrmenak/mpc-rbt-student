@@ -11,4 +11,16 @@ def generate_launch_description():
     
     return LaunchDescription([
 
+        Node(
+            package= 'rviz2',
+            executable= 'rviz2',
+            name= 'rviz2',
+            arguments= ['-d', rviz_config_path]
+        ),
+
+        Node(
+            package= 'localization_node',
+            executable= 'localization_node',
+            name= 'localization_node'
+        )
     ])
