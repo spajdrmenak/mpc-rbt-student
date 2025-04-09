@@ -46,9 +46,9 @@ add_executable(keyboard_control src/keyboard_control_node.cpp)
 target_link_libraries(keyboard_control ${PROJECT_NAME})
 install(TARGETS keyboard_control DESTINATION include/${PROJECT_NAME})
 
-add_executable(localization_node src/localization_node.cpp)
-target_link_libraries(localization_node ${PROJECT_NAME})
-install(TARGETS localization_node DESTINATION include/${PROJECT_NAME})
+add_executable(localization src/localization_node.cpp)
+target_link_libraries(localization ${PROJECT_NAME})
+install(TARGETS localization DESTINATION include/${PROJECT_NAME})
 
 ament_export_include_directories(include)
 ament_export_dependencies($dependencies)

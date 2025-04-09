@@ -19,8 +19,8 @@ def generate_launch_description():
         ),
 
         Node(
-            package= 'localization_node',
-            executable= 'localization_node',
-            name= 'localization_node'
+            package= 'mpc_rbt_student',
+            executable= 'localization',
+            name= 'localization'
         )
     ])
